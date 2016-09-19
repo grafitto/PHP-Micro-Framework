@@ -1,0 +1,17 @@
+<?php
+DEFINE("HOST","localhost");
+DEFINE("ROOT","root");
+DEFINE("PASS","");
+DEFINE("EMAIL_PORT",465);
+DEFINE("EMAIL_HOST","smtp.gmail.com");
+DEFINE("EMAIL_USERNAME","nderitukelvin19@gmail.com");
+DEFINE("EMAIL_PASSWORD","1234567youtube");
+DEFINE("PROJECT_TITLE", "MY PROJECT");
+DEFINE("DATABASE","database");
+DEFINE("USER_TABLE","users");
+DEFINE("BASEURL","localhost/");
+DEFINE("API_KEY","AIzaSyBuxxZkoWHTGzl5No6AwkAu3UYdApDRUEs");
+
+DEFINE("SMS_API_KEY","60fb3f46a7a689090973728dcd790a784d44eeabd02bcc0e1f93a3639a0f0c70");
+DEFINE("SMS_API_NAME","KevinNderitu");
+?>
