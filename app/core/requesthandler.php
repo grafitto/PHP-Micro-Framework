@@ -8,7 +8,7 @@ class requestHandler
 		if(isset($_SERVER['HTTP_REFERER'])){
 			$this->requestUrl = $_SERVER['HTTP_REFERER'];
 		}else{
-			$this->requestUrl = '/guest';
+			$this->requestUrl = '/';
 		}
 	}
 	/**
