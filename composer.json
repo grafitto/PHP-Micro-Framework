@@ -1,0 +1,28 @@
+{
+    "name": "nderitu/php-micro-framework",
+    "description": "A simple PHP web framework",
+    "require": {
+        "twitter/bootstrap": "^3.3"
+    },
+    "authors": [
+        {
+            "name": "Kevin Nderitu",
+            "email": "nderitukelvin19@gmail.com"
+        }
+    ],
+  "autoload": {
+    "classmap": [
+      "app/core/africastalking.php",
+      "app/core/application.php",
+      "app/core/databaseobject.php",
+      "app/core/dataobject.php",
+      "app/core/email.php",
+      "app/core/loggedinhandler.php",
+      "app/core/login.php",
+      "app/core/model.php",
+      "app/core/render.php",
+      "app/core/requesthandler.php",
+      "app/core/session.php"
+    ]
+  }
+}
