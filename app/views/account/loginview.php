@@ -1,24 +1,23 @@
 <html>
 <head>
 	<title>Account: Log in</title>
-	<link type="text/css" rel="stylesheet" href="<?=loadStatic("css/normalize.css")?>">
-	<link type="text/css" rel="stylesheet" href="<?=loadStatic("css/skeleton.css")?>">
-	<link type="text/css" rel="stylesheet" href="<?=loadStatic("css/skeleton.css")?>">
+	<link type="text/css" rel="stylesheet" href="<?=loadStatic("twitter/bootstrap/dist/css/bootstrap.min.css")?>">
+	<link type="text/css" rel="stylesheet" href="<?=loadStatic("twitter/bootstrap/dist/css/bootstrap-theme.min.css")?>">
 </head>
 <body>
 <div class="container">
-	<div class="three columns" style="border: 1px solid white"></div>
-	<div class="six columns" style="align: center">
+	<div class="col-md-3" style="border: 1px solid white"></div>
+	<div class="col-md-6" style="align: center">
 		<hr>
 			<a><h4>Log In</h4></a>
 		<hr>
 	<?php if(Raise::available()){ ?>
-		<div class="twelve columns">
+		<div class="col-md-12">
 			<p style="color: red"><?=Raise::get('error')?></p>
 		</div>
 	<?php } ?>
 	<div class="row">
-		<div class="twelve columns" >
+		<div class="col-md-12" >
 			<form action="" method="post">
 				<label for="name">Username:</label>
 					<input class="u-full-width" type="text" name="username" placeholder="Username" required>
@@ -29,11 +28,11 @@
 						<option value="landlord">Landlord</option>
 						<option value="tenant">Tenant</option>
 					</select> -->
-				<div class="twelve columns">
-					<div class="six columns">
-							<input class="button button-primary" type="submit" value="Log in">
+				<div class="col-md-12">
+					<div class="col-md-6">
+							<input class="btn btn-primary" type="submit" value="Log in">
 					</div>
-					<div class="six columns">
+					<div class="col-md-6">
 						<p>Need an account? <a href="signup">Sign Up</a></p>
 					</div>
 				</div>

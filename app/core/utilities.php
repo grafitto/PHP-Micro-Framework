@@ -1,6 +1,4 @@
 <?php
-require_once '../env.php';
-
 function debug($item){
 	print_r($item);
 	exit;
@@ -15,12 +13,12 @@ function redirect($path,$session = NULL){
 }
 
 function load($fragment,$data = NULL){
-	include  ".." . DIRECTORY_SEPARATOR . "app" . DIRECTORY_SEPARATOR . "views" . DIRECTORY_SEPARATOR . $fragment . ".php";
+	include  DIRECTORY_SEPARATOR . "app" . DIRECTORY_SEPARATOR . "views" . DIRECTORY_SEPARATOR . $fragment . ".php";
 		//include BASEURL . $fragment . ".php";
 }
 function loadStatic($file){
 	//$url = $_SERVER['SERVER_NAME'] . DIRECTORY_SEPARATOR . $file;
-	$url = "/" . $file;
+	$url = "/vendor/" . $file;
 	return $url;
 }
 function loadUserImage($name){

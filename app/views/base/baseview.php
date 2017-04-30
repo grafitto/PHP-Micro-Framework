@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title>Home</title>
-		<link type="text/css" rel="stylesheet" href="<?=loadStatic("css/bootstrap.css")?>">
-		<link type="text/css" rel="stylesheet" href="<?=loadStatic("css/bootstrap-theme.css")?>">
+		<link type="text/css" rel="stylesheet" href="<?=loadStatic("twitter/bootstrap/dist/css/bootstrap.min.css")?>">
+		<link type="text/css" rel="stylesheet" href="<?=loadStatic("twitter/bootstrap/dist/css/bootstrap-theme.min.css")?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>

@@ -1,6 +1,6 @@
 <?php
 class Render{
-	private static $path = '../app/views/';
+	private static $path = '/app/views/';
 
 	/*
 	 * This is what is used to render content to a view
