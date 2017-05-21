@@ -27,13 +27,13 @@ Lets begin with the folder structure:
             |--All image files
         |--fonts
             |--All fonts
-````
+```
 
 #### START THE SERVER
 
-Let us use ```php``` built-in server to start  
+Let us use `php` built-in server to start  
 
-```php -S localhost:8080 -t path\to\PHP-Micro-framework\public``` will start a serve in the public folder  
+`php -S localhost:8080 -t path\to\PHP-Micro-framework\public` will start a serve in the public folder  
 
 ### BASIC HTTP REQUEST LIFE-CYCLE
 
@@ -59,18 +59,19 @@ A handler is a class found in a file inside the `handlers` folder. The filename 
 Example: Assuming you want to create a handler called 'user'
 1. Create a file called `userhandler.php` in `handlers` folder
 2. In the file `userhandler.php` create a class called `UserHandler`
-   ```
-   class Userhandler extends requestHandler{
-    	public function get(){
+
+```php
+    class Userhandler extends requestHandler{
+        public function get(){
             //This method is called incase of a get request
         }
         public function post(){
             //This method is called incase of a post request
         }
-   }
-   ```
-   **Notice:** The class extends a base class `requestHandler` which has base functions  
-   These functions include:
+    }
+```
+**Notice:** The class extends a base class `requestHandler` which has base functions  
+These functions include:
 
 Method Name | Description
 ------------ | -------------
@@ -79,7 +80,8 @@ Method Name | Description
 
 A function `oncreate` is also called on all handlers before any other method is called. This `onCreate` method can be used for setup. For example, it can be used to restrict a handler to only a logged in user.
 Actually there is a `loggedInHandler` in *core* folder used to restrict a handler from being accessed by a user who is not logged in.
-```
+
+```php
 class Userhandler extends LoggedInHandler{
     //Code goes here
 }
@@ -107,7 +109,8 @@ The `filename, classname` of a model should be the same as the name of the MySQL
 Assuming you have a MySQL table named `user` with fields `id, full_name, user_name, age, password`
 
 A model representing that table should look like:
-```
+
+```php
 class User extends Model{
     public $id;
     public $full_name;
@@ -115,6 +118,7 @@ class User extends Model{
     public $age;
     public $password;
 }
+
 ```
 Note:
  1. The file name and MySQL table name should have the same name as the model class.
@@ -142,7 +146,8 @@ Method Name | Description
 
 Using the `user` model created earlier, lets assume that the user can only have a single article in their account.
 then:
-```
+
+```php
 class User extends Model{
     public $id;
     public $full_name;
@@ -164,7 +169,8 @@ hasOne method uses the ***modelname**_id* attribute in the calling object to fet
 **Example:**
 Using the user model created earlier, we assume that a user owns an article.
 We wold have an article model:
-```
+
+```php
 class Article extends Model{
     public $id;
     public $title;
@@ -183,7 +189,8 @@ class Article extends Model{
 **Example:**
 Using the user model created earlier, we assume that a user can have many articles.
 We wold have an article model:
-```
+
+```php
 class User extends Model{
     public $id;
     public $full_name;
